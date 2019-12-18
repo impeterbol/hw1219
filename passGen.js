@@ -3,11 +3,11 @@ let specChar = ' " !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~"  ';
 let numChar = '0123456789';
 let lowChar = 'abcdefghijklmnopqrstuvwxyz';
 let upChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//setting charsAll as global so that 
 
 // user presses the generate password button 
 
 document.getElementById("generate").addEventListener("click", passGen);
-
 
 // user gets a prompt that is stored to a let length: to choose a length of 8-128
 
@@ -78,14 +78,23 @@ function readyToGenerate(){
     for (var i=0;i<passwordNum;i++){
 
     // variable with random string in array called arrayString
-    let arrayString = Math.floor(Math.random() * charsAll.length + 1);
-    retPassword+=arrayString.charAt(Math.floor(Math.random() * arrayString.length + 1));
+    // as I want to get the value of charsAll and not the number, I'm adding charsAll with [   ]
+    //Also note to self - removing the +1 from math random allows to include 0 which in this case makes sense as the array has 0 element with chars
+
+    let arrayString = charsAll[Math.floor(Math.random() * charsAll.length)];
+   
+    retPassword+=arrayString.charAt(Math.floor(Math.random() * arrayString.length));
+   
 }
 return retPassword;
 
+
 }
-    console.log(readyToGenerate());
-  
+
+console.log(readyToGenerate());
+
+
+
 
 }
 
