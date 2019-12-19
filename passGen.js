@@ -101,17 +101,20 @@ return retPassword;
 document.getElementById("password").innerHTML=readyToGenerate();
 
 // function that allows user to copy password to the clipboard when pressing generate
-//Note - if user clicks out somewhere first and then clicks copy button again so that textarea losses focus - password won't be copied
-document.getElementById("generate").addEventListener("click", passCopy);
+
+
 
 function passCopy() {
-    let passwordArea = document.getElementById("password");
-    passwordArea.select();
+    let copiedText = document.getElementById("password");
+    copiedText.select();
+    //adding selection reange for phones
+    copiedText.setSelectionRange(0, 99999);
     document.execCommand("copy");
+    //alerting what actually did we copy
+    alert("Copied password " + copiedText.value);
   };
 
-
-
+  document.getElementById("copy").addEventListener("click",passCopy);
 }
 
 
