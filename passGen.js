@@ -33,7 +33,8 @@ function passGen () {
     if (parseInt(passwordLength)<8 || parseInt(passwordLength)>128) {
         alert("please press Generate button and enter a number between 8 - 128");
     };
-    console.log(passwordNum);
+
+    //removing  console.log(passwordNum); for prod
 
 // user gets a confirm about  future password 
     let wantsToProceedQ = confirm(' Now you will be asked about other parameters for your password: If you want your password to have special characters, numeric characters, lowercase characters, UPPERCASE characters. Do you want to proceed? (Press OK to proceed and Cancel to stop');
@@ -47,8 +48,11 @@ function passGen () {
     if (specCharQ === true) {
         charsAll.push(specChar);
     }
-    console.log(specCharQ);
-    console.log(charsAll);
+
+    //removing console.log for prod
+    // console.log(specCharQ);
+    // console.log(charsAll);
+
     alert("Ok! Moving to the next question (2/4)!");
 
 // user gets a prompt about numeric char that is stored to a let 
@@ -56,8 +60,9 @@ function passGen () {
     if (numCharQ === true) {
         charsAll.push(numChar);
     }
-    console.log(numCharQ);
-    console.log(charsAll);
+     //removing console.log for prod
+    // console.log(numCharQ);
+    // console.log(charsAll);
     alert("Ok! Moving to the next question (3/4)!");
 
 // user gets a prompt about lower char that is stored to a let 
@@ -65,8 +70,9 @@ function passGen () {
     if (lowCharQ === true) {
         charsAll.push(lowChar);
     }
-    console.log(lowCharQ);
-    console.log(charsAll);
+     //removing console.log for prod
+    // console.log(lowCharQ);
+    // console.log(charsAll);
     alert("Ok! Moving to the next question (4/4)!");
 
 // user gets a prompt about UPPER char that is stored to a let 
@@ -74,8 +80,9 @@ function passGen () {
     if (upCharQ === true) {
         charsAll.push(upChar);
     }
-    console.log(upCharQ);
-    console.log(charsAll);
+     //removing console.log for prod
+    // console.log(upCharQ);
+    // console.log(charsAll);
     alert("Ok! please see your password!");
 
 
