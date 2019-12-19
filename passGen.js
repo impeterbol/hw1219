@@ -23,6 +23,12 @@ function passGen () {
     let passwordLength = prompt('Please choose lenght, enter number between 8-128');
     let passwordNum = parseInt(passwordLength);
 
+    //checking if the password length is declared with numbers
+    if (isNaN(passwordNum)) 
+    {
+      alert("Your password length must be added in numbers - please press Generate button on the page to start again");
+      return stop;
+    }
     // if number is less than 8 or more that 128 user gets an alert 
     if (parseInt(passwordLength)<8 || parseInt(passwordLength)>128) {
         alert("please press Generate button and enter a number between 8 - 128");
@@ -91,11 +97,24 @@ return retPassword;
 
 }
 
-console.log(readyToGenerate());
+// adding this to the HTML text area field with id password
+document.getElementById("password").innerHTML=readyToGenerate();
+
+// function that allows user to copy password to the clipboard when pressing generate
 
 
 
+function passCopy() {
+    let copiedText = document.getElementById("password");
+    copiedText.select();
+    //adding selection reange for phones
+    copiedText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    //alerting what actually did we copy
+    alert("Copied password " + copiedText.value);
+  };
 
+  document.getElementById("copy").addEventListener("click",passCopy);
 }
 
 
