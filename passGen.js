@@ -53,7 +53,7 @@ function passGen () {
     // console.log(specCharQ);
     // console.log(charsAll);
 
-    alert("Ok! Moving to the next question (2/4)!");
+    
 
 // user gets a prompt about numeric char that is stored to a let 
     let numCharQ = confirm('(2/4) Would you like to have numeric characters in your password?  (Press OK to include or Cancel to exclude and proceed to the next question');
@@ -63,7 +63,7 @@ function passGen () {
      //removing console.log for prod
     // console.log(numCharQ);
     // console.log(charsAll);
-    alert("Ok! Moving to the next question (3/4)!");
+    
 
 // user gets a prompt about lower char that is stored to a let 
     let lowCharQ= confirm('(3/4) Would you like to have lowercase characters in your password? (Press OK to include or Cancel to exclude and proceed to the next question');
@@ -73,7 +73,7 @@ function passGen () {
      //removing console.log for prod
     // console.log(lowCharQ);
     // console.log(charsAll);
-    alert("Ok! Moving to the next question (4/4)!");
+   
 
 // user gets a prompt about UPPER char that is stored to a let 
     let upCharQ= confirm('(4/4) Would you like to have UPPERCASE characters in your password?  (Press OK to include or Cancel to exclude and proceed to the next question');
